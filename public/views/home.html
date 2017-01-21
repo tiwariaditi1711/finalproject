@@ -1,0 +1,12 @@
+<div>
+    
+</div>
+
+<div class="movies-wrapper">
+    <div class="movies-container" ng-repeat="movie in movieList">
+        <img class="movie-poster" ng-src={{movie.moviPoster}} />
+        <span class="movie-title">Title : {{movie.moviTitle}}</span>
+        <span class="movie-title">Director : {{movie.moviDirector}}</span>
+        <button type="button" class="button-color book btn btn-primary" ng-click ="nextPage(movi.moviTitle,movie.moviPoster)">Book</button>
+    </div>
+</div>

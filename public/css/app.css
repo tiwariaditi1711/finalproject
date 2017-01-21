@@ -1,0 +1,51 @@
+.movies-wrapper{
+    background-color: grey;
+}
+.container{
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.movies-container {
+    height: 270px;
+    width: 285px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 110px;
+}
+
+.movie-poster {
+    height: 220px;
+    width: 320px;
+    display: block;
+}
+
+.movie-title {
+    display: block;
+}
+
+.movie-director {
+    display: block;
+}
+
+.book {
+    width: 320px !important;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.movies-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.fgm-movie-align {
+    margin-bottom: 20px;
+}
+
+.filter-movies {
+    margin-bottom: 40px;
+}

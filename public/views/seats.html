@@ -1,0 +1,84 @@
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12">
+<div class="table-responsive">
+    
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <style>h4.outset {border-style: outset; border-bottom-color: red}</style>
+                    <h4 class="outset">Seat Availibility</h4>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+
+                    <td>Select Your Region </td>
+
+                    <td>
+                        <select type="text" ng-model= "post.city">
+                            <option  ng-repeat= "tl in theatreList | unique: 'city' ">{{tl.city}}</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+</div>
+            
+
+<div class="table-responsive">
+        <table class="table">
+
+                <tr>
+
+
+                    <td>Choose Date </td>
+
+                    <td>
+                        <select ng-model= "showDate" class="form-control">
+                            <option  ng-repeat= "x in moviDate">{{x  | date:'dd, MMM yyyy'}}</option>
+                        </select>
+                    </td>
+                </tr>
+        </table>
+</div>
+
+            <br><br><br><br><br>
+
+<div>
+
+        <table class="table table">
+            <thead>
+                <tr>
+
+                    <th>Theatre</th>
+                    <th>Movie</th>
+                    <th>Show Date</th>
+                    <th>Show Timings</h4></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in mappingList | filter:showDate | filter:post.city | filter:post.movi ">
+                    <td>{{x.theatre}}</td>
+                    <td>{{x.moviTitle}}</td>
+                    <td>{{x.showdate | date:'dd, MMMM yyyy' }}</td>
+                    <td ng-repeat="a in x.timeslot">
+                        <button ng-click="showtimings(a,x)" class="btn btn-danger">{{a}}</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+      
+
+
+</div>
+</div>
+</div>

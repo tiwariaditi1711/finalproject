@@ -1,0 +1,67 @@
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Booked Movie</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Movie</label>
+  <div class="col-md-6">
+  <input id="textinput" name="textinput" type="text" placeholder="Enter Booked Movie Name" class="form-control input-md" ng-model="cncl.booked_movie">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Email Id</label>
+  <div class="col-md-6">
+  <input id="textinput" name="textinput" type="text" placeholder="Email id" class="form-control input-md" ng-model="cncl.booked_email">
+
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="glyphicon glyphicon-search btn btn-success" ng-click="search_booked_movie(cncl)">Search</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<br><br><br>
+
+<table class="table table-bordered">
+
+    <thead>
+      <tr>
+
+        <th>Movie</th>
+        <th>City</th>
+        <th>Theatre</th>
+        <th>Amount</th>
+        <th>Book Date</th>
+        <th>Seat No</th>
+        <th>Action</th>
+      </tr>
+
+  </thead>
+  <tbody>
+<tr ng-repeat="p in getTicketData">
+  <td>{{p.moviTitle}} </td>
+    <td>{{p.city}}</td>
+    <td>{{p.theatre}} </td>
+      <td>{{p.amount}} </td>
+      <td>{{p.bookdate}} </td>
+      <td>{{p.seat_no}} </td>
+
+      <td><button ng-click="deleteTicket(p)" class="glyphicon glyphicon-remove btn btn-danger">Cancel Ticket</button></td>
+
+    </tr>
+  </tbody>
+</table>

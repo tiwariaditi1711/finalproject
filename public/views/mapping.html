@@ -1,0 +1,135 @@
+<div>
+    <center>
+        <table class="table">
+            <tbody>
+                
+                <tr>
+                    <td>Movie</td>
+                    <td>
+                        <select  ng-model= "post.moviTitle">
+
+                        <option   ng-repeat="movie in movieList" value="{{movie.moviTitle}}">{{movie.moviTitle}}</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Theatre </td>
+                    <td>
+                        <select type= "text" ng-model= "post.theatre">
+
+                        <option  ng-repeat= "th in theatreList | filter: post.city" value="{{th.theatre}}">{{th.theatre}}</option>
+                        </select>
+                    </td>
+                </tr>    
+                    
+                <tr>
+                    <td>City </td>
+                    <td>
+                        <select type= "text" ng-model= "post.city">
+                        <option  ng-repeat= "th in theatreList | unique: 'city'" value="{{th.city}}">{{th.city}}</option>
+                        </select>
+                    </td>    
+                </tr>
+
+                     <tr>
+                    <td>ShowDate</td> 
+                    <td>
+                        <!-- <input type ="text" ng-model="showdate" id="datepicker" ng-click="datepic()"/></td> -->
+                            
+                             <!-- <input type="text" id="datepicker" ng-model="showdate"/>-->
+                             
+
+
+                             
+                             <input type = "text" id = "datepicker-1" ng-model="showdate"> </td>
+                             
+
+                </tr>
+                
+                <tr>
+                    <td>Time</td>
+                    <td>
+
+                        <select name="hours" ng-model="Hour" ng-change="hourshowSelectValue(Hour)">
+                            <option>09</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            
+                        </select>
+                        <select ng-model="Minute" ng-change="minuteshowSelectValue(Minute)" >
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option>
+                            <option>25</option>
+                            <option>30</option>
+                            <option>35</option>
+                            <option>40</option>
+                            <option>45</option>
+                            <option>50</option>
+                
+                        </select>
+
+                        <select ng-model="Am_Pm" ng-change="ampmshowSelectValue(Am_Pm)">
+                            <option>AM</option>
+                            <option>PM</option>
+                        </select>
+
+                    <button ng-click="insertArray()" class="btn btn-danger">add</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td><button ng-click="addMapping(mapping)" class="btn btn-danger">MAP</button></td>
+            </tr>
+
+            <tr ng-repeat="ar in timeAr">
+                <td >
+                     {{ar}}
+                </td>
+                <td>
+                    <td><button ng-click="removeArray(mapping)" class="btn btn-danger">Remove</button></td>
+            </tr>
+                
+
+        </tbody>
+    </table>
+
+    <table class="table table" >
+        <thead>
+        <tr>
+        <th></th>
+        <th>Theatre</th>
+        <th>Movie</th>
+        <th>City</th>
+        <th>Show Date</th>
+        <th>Show Timings</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in mappingList">
+        <td>
+          <button  ng-click="removeMapping(x)" class= "btn btn-danger">Remove</button>
+        </td>
+        <td>{{x.theatre}}</td>
+        <td>{{x.moviTitle}}</td>
+        <td>{{x.city}}</td>
+        <td>{{x.showdate}}</td>
+        <td ng-repeat="a in x.timeslot">{{a}}</td>
+        </tr>
+        </tbody>
+  </table>
+
+    </center>
+</div>

@@ -1,0 +1,44 @@
+<style media="screen">
+
+.form_bg {
+  background-color:#eee;
+  color:#666;
+  padding:20px;
+  border-radius:10px;
+  position: absolute;
+  border:1px solid #fff;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 350px;
+  height: 320px;
+}
+.align-center {
+  text-align:center;
+}
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="form_bg">
+          <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+            <form>
+                 <h2 class="text-center">Login Page</h2>
+                <br/>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="userid" placeholder="User id" required="true" ng-model="loginForm.username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Password" required="true" ng-model="loginForm.password">
+                </div>
+                <br/>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-default" id="login" ng-click="login()" >Login<!--<a href="#/admin">Login</a>--></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

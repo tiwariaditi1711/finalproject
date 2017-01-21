@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="movieApp">
+
+<head>
+  <title>MOVIE BOOKING</title>
+
+  <!-- load bootstrap and fontawesome via CDN -->
+    
+<script type="text/javascript" src="/build/bundle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-resource.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.14/angular-filter.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="css/pstyle.css"/>
+      <link rel="stylesheet" type="text/css" href="css/seatstyles.css"/>
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css"/>
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+      
+           
+  <script src = "https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+  <!--<img src = "/public/images/bgimage.jpg" alt="bgimage" style="width:100%;">-->
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<body>
+<div>
+ <header>
+            <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">MOVIE BOOKING</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#/register"><i class="fa fa-shield"></i> New User</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#/login"><i class="fa fa-shield"></i> Login</a></li>
+                    <li><a href="#/booking"><i class="fa fa-shield"></i> Booking</a></li>
+                    <li><a href="#/theatre"><i class="fa fa-shield"></i> Theatre</a></li>
+                    <li><a href="#/mapping"><i class="fa fa-shield"></i> Mapping</a></li>
+                    <li><a href="#/cancellation"><i class="fa fa-comment"></i> Cancellation</a></li>
+                    <li><a href="#/confirmation"><i class="fa fa-shield"></i> Confirmation</a></li>
+                    
+                    
+                    
+
+                </ul>
+            </div>
+            </nav>
+        </header>
+    
+  <div ng-view>
+  </div>
+
+  
+
+</div>
+
+
+</body>
+</html>

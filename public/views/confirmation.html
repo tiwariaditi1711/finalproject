@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class ="col-md-12 alert alert-success">
+
+  <h2>
+   <b><i style="font-size:24px;" class="fa">&#xf00c;
+   Thank You For Booking</i></b>
+ </h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<img src="{{movi.moviPoster}}" height="250" width="250">
+</div>
+
+<div class="col-md-4">
+  <h2>
+      {{mname}}
+    </h2>
+      <p>
+        <b> Movie: {{Moviename}} </b>
+      </p>
+        <p>
+          <b> Theatre: {{TheatreName}},{{city}} </b>
+        </p>
+
+        <p>
+          <b> Show Timings: {{showTime}} </b>
+        </p>
+
+          <p>
+            <b> Quantity: {{coutSeat}} </b>
+          </p>
+
+
+<br><br><br><br>
+          
+          <table style="width:100%">
+            <tr>
+              <td><b>Ticket Price:</b></td>
+                <td><b>Rs.{{Amount}}</b></td>
+            </tr>
+            <tr>
+              <td><b>Internet handling fees:</b></td>
+              <td><b>N/A</b></td>
+            </tr>
+          </table>
+          <br>
+
+          <table style="width:100%">
+            <tr>
+              <td>
+                <font size="5px">Amount Paid<font>
+                </td>
+                <td>
+                  <font size="5px">Rs.{{Amount}}</font>
+                </td>
+              </tr>
+            </table>
